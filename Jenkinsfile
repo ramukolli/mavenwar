@@ -3,6 +3,7 @@ pipeline {
 	tools {
         maven 'mymaven' 
     }
+	 stages {
     stage('Sonarqube') {
     environment {
         scannerHome = tool 'sonascanner'
@@ -14,6 +15,7 @@ pipeline {
         timeout(time: 10, unit: 'MINUTES') {
             waitForQualityGate abortPipeline: true
         }
+    }
     }
 }
 }
