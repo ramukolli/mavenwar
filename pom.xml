@@ -15,12 +15,29 @@
 			<artifactId>spark-core</artifactId>
 			<version>2.3</version>
 		</dependency>
+		<groupId>org.sonarsource.scanner.maven</groupId>
+<artifactId>sonar-maven-plugin</artifactId>
+<version>3.2</version>
+</dependency>
 	</dependencies>
-	<properties>
-  <sonar.projectKey>padmarajugadam_mavenwar</sonar.projectKey>
+<profiles>
+<profile>
+<id>sonarcloud</id>
+<activation>
+<activeByDefault>true</activeByDefault>
+</activation>
+<properties>
+<!-- Optional URL to server. Default value is http://localhost:9000 -->
+	<sonar.projectKey>padmarajugadam_mavenwar</sonar.projectKey>
   <sonar.organization>padmarajugadam</sonar.organization>
-  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-  <sonar.login>c0c7651bb7ae946ce7d24c42e63f10e6dc68a000</sonar.login>
+<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+</properties>
+</profile>
+</profiles>
+	<properties>
+  
+  <!--<sonar.host.url>https://sonarcloud.io</sonar.host.url> -->
+  
 </properties>
 
 	<build>
