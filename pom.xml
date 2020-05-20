@@ -16,6 +16,12 @@
 			<version>2.3</version>
 		</dependency>
 	</dependencies>
+	<properties>
+  <sonar.projectKey>padmarajugadam_mavenwar</sonar.projectKey>
+  <sonar.organization>padmarajugadam</sonar.organization>
+  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+  <sonar.login>c0c7651bb7ae946ce7d24c42e63f10e6dc68a000</sonar.login>
+</properties>
 
 	<build>
 		<plugins>
